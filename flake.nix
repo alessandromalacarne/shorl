@@ -20,7 +20,8 @@
       };
     in {
       devShells.${system}.default = pkgs.mkShell {
-        buildInputs = [ pkgs.typescript ];
+        buildInputs =
+          [ pkgs.typescript pkgs.gitflow pkgs.unstable.awscli2 pkgs.nodejs ];
 
         shellHook = ''
           echo "Welcome to Shorl!"
